@@ -5,7 +5,31 @@ const carSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a name']
     },
+    info: {
+        type: String,
+        required: [true, 'Please add a info']
+    },
     describtion: {
+        type: String,
+        required: [true, 'Please add a description']
+    },
+    price: {
+        type: Number,
+        required: [true, 'Please add a price']
+    },
+    hand: {
+        type: Number,
+        required: [true, 'Please add a number of hand']
+    },
+    year: {
+        type: Number,
+        required: [true, 'Please add a year']
+    },
+    engineSize: {
+        type: Number,
+        required: [true, 'Please add a description']
+    },
+    salesArea: {
         type: String,
         required: [true, 'Please add a description']
     },

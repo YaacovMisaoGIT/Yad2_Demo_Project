@@ -15,7 +15,7 @@ const getCar = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const setCar = asyncHandler(async (req, res) => {
-    const { name, describtion, mileAge, engineType, gearbox, color, firstDay, lastDay, currentOwnership, previousOwnership } = req.body
+    const { name, info, describtion, price, hand, year, engineSize, salesArea, mileAge, engineType, gearbox, color, firstDay, lastDay, currentOwnership, previousOwnership } = req.body
     if(!req.body) {
         res.status(400)
         throw new Error('Please add a all the information required')
@@ -23,7 +23,13 @@ const setCar = asyncHandler(async (req, res) => {
 
     const car = await Car.create({
         name: req.body.name,
+        info: req.body.info,
         describtion: req.body.describtion,
+        price: req.body.price,
+        hand: req.body.hand,
+        year: req.body.year,
+        engineSize: req.body.engineSize,
+        salesArea: req.body.salesArea,
         mileAge: req.body.mileAge,
         engineType: req.body.engineType,
         gearbox: req.body.gearbox,
