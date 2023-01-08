@@ -4,14 +4,14 @@ const { getCar,
     setCar,
     updateCar,
     deleteCar,
-    } = require('../controllers/goalController')
+    } = require('../controllers/carController')
 
 router.route('/').get(getCar).post(setCar)
-// router.get('/', getGoal)
-// router.post('/', setGoal)
+// router.get('/', getCar)
+// router.post('/', setCar)
 
 router.route('/:id').delete(deleteCar).put(updateCar)
-// router.put('/:id', updateGoal)
-// router.delete('/:id', deleteGoal)
+// router.put('/:id', updateCar)
+// router.delete('/:id', deleteCar)
 
 module.exports = router
