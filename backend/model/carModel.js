@@ -71,72 +71,72 @@ const carSchema = mongoose.Schema({
             required: [true, 'Please add a previous ownership']
         }, 
         }],
-    // amature:[ {
-    //     airConditioner: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     roofWindow: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     fourIntoTwo: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     stabilityControl: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     tirePressureSensors: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     identifyTrafficSign: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     abs: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     powerSteering: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     reverseCamera: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     pedestrianDetection: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     beltSensors: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    // electricWindow: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     airBags: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     magnesiumWheels: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     auxiliaryBrakeSystem: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    //     automaticLightning: {
-    //         type: Boolean,
-    //         required: true
-    //     },
-    // }]
+    Amature:[ {
+        airConditioner: {
+            type: Boolean,
+            required: true
+        },
+        roofWindow: {
+            type: Boolean,
+            required: true
+        },
+        fourIntoTwo: {
+            type: Boolean,
+            required: true
+        },
+        stabilityControl: {
+            type: Boolean,
+            required: true
+        },
+        tirePressureSensors: {
+            type: Boolean,
+            required: true
+        },
+        identifyTrafficSign: {
+            type: Boolean,
+            required: true
+        },
+        abs: {
+            type: Boolean,
+            required: true
+        },
+        powerSteering: {
+            type: Boolean,
+            required: true
+        },
+        reverseCamera: {
+            type: Boolean,
+            required: true
+        },
+        pedestrianDetection: {
+            type: Boolean,
+            required: true
+        },
+        beltSensors: {
+            type: Boolean,
+            required: true
+        },
+        electricWindows: {
+            type: Boolean,
+            required: true
+        },
+        airBags: {
+            type: Boolean,
+            required: true
+        },
+        magnesiumWheels: {
+            type: Boolean,
+            required: true
+        },
+        auxiliaryBrakeSystem: {
+            type: Boolean,
+            required: true
+        },
+        automaticLightning: {
+            type: Boolean,
+            required: true
+        },
+    }]
 
 },
 {

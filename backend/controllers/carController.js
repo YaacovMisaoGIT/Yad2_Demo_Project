@@ -15,7 +15,7 @@ const getCar = asyncHandler(async (req, res) => {
 // @route POST /api/cars
 // @access Private
 const setCar = asyncHandler(async (req, res) => {
-    const { name, info, describtion, price, hand, year, engineSize, contact, salesArea, More } = req.body
+    const { name, info, describtion, price, hand, year, engineSize, contact, salesArea, More, Amature } = req.body
     console.log(More)
     if(!req.body) {
         res.status(400)
@@ -42,23 +42,24 @@ const setCar = asyncHandler(async (req, res) => {
         currentOwnership: req.body.More.currentOwnership,
         previousOwnership: req.body.More.previousOwnership,
         }],
-    // amature: [{
-    //     airConditioner: req.body.amature.airConditioner,
-    //     roofWindow: req.body.amature.roofWindow,
-    //     fourIntoTwo: req.body.amature.fourIntoTwo,
-    //     stabilityControl: req.body.amature.stabilityControl,
-    //     tirePressureSensors: req.body.amature.tirePressureSensors,
-    //     identifyTrafficSign: req.body.amature.identifyTrafficSign,
-    //     abs: req.body.amature.abs,
-    //     powerSteering: req.body.amature.powerSteering,
-    //     reverseCamera: req.body.amature.reverseCamera,
-    //     pedestrianDetection: req.body.amature.pedestrianDetection,
-    //     beltSensors: req.body.amature.beltSensors,
-    //     electricWindows: req.body.amature.electricWindows,
-    //     magnesiumWheels: req.body.amature.magnesiumWheels,
-    //     auxiliaryBrakeSystem: req.body.amature.auxiliaryBrakeSystem,
-    //     automaticLightning: req.body.amature.automaticLightning,
-    //     }]
+    Amature: [{
+        airConditioner: req.body.Amature.airConditioner,
+        roofWindow: req.body.Amature.roofWindow,
+        fourIntoTwo: req.body.Amature.fourIntoTwo,
+        stabilityControl: req.body.Amature.stabilityControl,
+        tirePressureSensors: req.body.Amature.tirePressureSensors,
+        identifyTrafficSign: req.body.Amature.identifyTrafficSign,
+        abs: req.body.Amature.abs,
+        powerSteering: req.body.Amature.powerSteering,
+        reverseCamera: req.body.Amature.reverseCamera,
+        pedestrianDetection: req.body.Amature.pedestrianDetection,
+        beltSensors: req.body.Amature.beltSensors,
+        electricWindows: req.body.Amature.electricWindows,
+        airBags: req.body.Amature.airBags,
+        magnesiumWheels: req.body.Amature.magnesiumWheels,
+        auxiliaryBrakeSystem: req.body.Amature.auxiliaryBrakeSystem,
+        automaticLightning: req.body.Amature.automaticLightning,
+        }]
     })
 
     res.status(200).json(car)
