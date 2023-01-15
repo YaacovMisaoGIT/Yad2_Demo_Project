@@ -74,67 +74,67 @@ const carSchema = mongoose.Schema({
     Amature:[ {
         airConditioner: {
             type: Boolean,
-            required: true
+            default: false
         },
         roofWindow: {
             type: Boolean,
-            required: true
+            default: false
         },
         fourIntoTwo: {
             type: Boolean,
-            required: true
+            default: false
         },
         stabilityControl: {
             type: Boolean,
-            required: true
+            default: false
         },
         tirePressureSensors: {
             type: Boolean,
-            required: true
+            default: false
         },
         identifyTrafficSign: {
             type: Boolean,
-            required: true
+            default: false
         },
         abs: {
             type: Boolean,
-            required: true
+            default: false
         },
         powerSteering: {
             type: Boolean,
-            required: true
+            default: false
         },
         reverseCamera: {
             type: Boolean,
-            required: true
+            default: false
         },
         pedestrianDetection: {
             type: Boolean,
-            required: true
+            default: false
         },
         beltSensors: {
             type: Boolean,
-            required: true
+            default: false
         },
         electricWindows: {
             type: Boolean,
-            required: true
+            default: false
         },
         airBags: {
             type: Boolean,
-            required: true
+            default: false
         },
         magnesiumWheels: {
             type: Boolean,
-            required: true
+            default: false
         },
         auxiliaryBrakeSystem: {
             type: Boolean,
-            required: true
+            default: false
         },
         automaticLightning: {
             type: Boolean,
-            required: true
+            default: false
         },
     }]
 
