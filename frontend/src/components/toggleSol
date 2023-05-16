@@ -1,0 +1,54 @@
+import { useState } from 'react';
+import "./cardetails.css"
+
+const CarDetails = ({ car }) => {
+  const { price } = car;
+  const [showHero2, setShowHero2] = useState(false);
+
+  const toggleHero = () => {
+    setShowHero2(!showHero2);
+  };
+
+  return (
+    <div>
+      <section className={showHero2 ? 'hero2' : 'hero'}>
+        <div className={showHero2 ? 'cardetails--container2' : 'cardetails--container'}>
+          <div className={showHero2 ? 'vital_info2' : 'vital_info'}>
+            <p className={showHero2 ? 'divider--price2' : 'divider--price'}> {price} </p>
+            <div className={showHero2 ? 'divider--enginesize2' : 'divider--enginesize'}>
+              <p> {car.engineSize} </p>
+              <p> {car.hand} </p>
+              <p className={showHero2 ? 'divider--year2' : 'divider--year'}> {car.year} </p>
+            </div>
+            <div className={showHero2 ? 'vl2' : 'vl'}>
+              <p> {car.name} </p>
+              <p>Prestige Automatic 1.0 (100 cc)</p>
+            </div>
+          </div>
+          <div className={showHero2 ? 'hero--container2' : 'hero--container'}>
+            <img src={car.images} className={showHero2 ? 'hero_photo2' : 'hero_photo'} alt="car here" />
+            <img className={showHero2 ? 'imgWhiteLogo2' : 'imgWhiteLogo'} src={require("../images/yad2logoWhite.png")} alt="whitelogo here" />
+          </div>
+        </div>
+        <div className={showHero2 ? 'lower_vital_info_tag2' : 'lower_vital_info_tag'}>
+          <p>cc</p>
+          <p>Hands</p>
+          <p>Year</p>
+        </div>
+        <p><span><strong>Updated today</strong></span></p>
+      </section>
+      <button onClick={toggleHero}>Toggle Hero</button>
+    </div>
+  );
+};
+
+export default CarDetails;
+
+
+
+
+//========
+{/* <p>Air Conditioner: {car.airConditioner ? '√' : '×'}</p>
+<p>Roof Window: {car.roofWindow ? '√' : '×'}</p>
+<p>Four Into Two: {car.fourIntoTwo ? '√' : '×'}</p> */}
+{/* <p>Air Conditioner: {car.airConditioner ? <TickIcon /> : <CrossIcon />}</p> */}

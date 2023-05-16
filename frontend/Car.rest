@@ -1,0 +1,18 @@
+GET http://localhost:5003/api/carData
+
+###
+GET http://localhost:5003/api/carData/63fe525ab4e49397be455103
+
+###
+POST http://localhost:5003/api/carData
+Content-Type: "application/json"
+
+{
+    "name": "Mazda",
+    "price": "65,000",
+    "hand": 2,
+    "year": 2019,
+    "engineSize": "1,248",
+}
+
+###

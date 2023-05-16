@@ -1,0 +1,41 @@
+/* styles.css */
+
+.filter-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 490px;
+  }
+  
+  .filter-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select,
+  input[type='number'] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type='number'] {
+    width: 80px;
+  }
+   
+.iframe__top{
+  margin-left: 160px;
+  height: 190px;
+  width: 1185px;
+}
+.iframe__top:hover{
+  cursor: pointer;
+}

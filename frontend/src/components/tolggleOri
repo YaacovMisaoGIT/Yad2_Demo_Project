@@ -1,0 +1,126 @@
+import { useState } from 'react';
+import "./cardetails.css"
+
+
+const CarDetails = ({ car } ) => {  // props
+  const {price,}=car
+
+  // const [showHero2, setShowHero2] = useState(false);
+  // const handleClick = () => {
+  //   setShowHero2(true);
+  // };
+
+  // {console.log(car)};
+    return (
+      <div>
+      {/* {showHero2 &&  !( */}
+      <section className="hero" >  
+      {/* <section className="hero" onClick={handleClick}> */}
+      <div className="cardetails--container">
+      <div className="vital_info">
+          <p className="divider--price"> {price} </p>
+          {/* <hr className="hr--price"/> */}
+          <div className="divider--enginesize">
+          <p> {car.engineSize} </p>
+          <p> {car.hand} </p>
+          <p className="divider--year"> {car.year} </p>
+          </div>
+          <div class="vl">
+          <p> {car.name} </p>     {/* <p>Hyundai i20</p> */} 
+          <p>Prestige Automatic 1.0 (100 cc)</p>
+          </div> 
+      </div>
+    
+      <div className="hero--container">
+      {/* <img src={require("../images/pexels-mike-b-120049.jpg")} className="hero_photo" alt="car here" /><br/> */}
+      {/* <img src={"https://th.bing.com/th/id/OIP.kijxKVpEGaFdPWsifdEiFAHaGT?pid=ImgDet&rs=1"} className="hero_photo" alt="car here" /><br/> */}
+      <img src= {car.images} className="hero_photo" alt="car here" />
+      <img className="imgWhiteLogo" src={require("../images/yad2logoWhite.png")}  alt="whitelogo here" />
+      </div>
+      </div>
+      {/* <div className="lower_vital_info">
+          <p>2010</p>
+          <p>2</p>
+          <p>1.591</p>
+      </div>
+     */}
+         <div className="lower_vital_info_tag">
+                <p>cc</p>
+                <p cla>Hands</p>
+                <p>Year</p>
+            </div>
+        <p><span><strong>Updated today</strong></span></p>
+  </section>
+   {/* )} */}
+  
+  {/* {showHero2 && ( */}
+      <section className="hero2">
+      <div className="cardetails--container2">
+      <div className="vital_info2">
+          <p className="divider--price2"> {price} </p>
+          {/* <hr className="hr--price"/> */}
+          <div className="divider--enginesize2">
+          <p> {car.engineSize} </p>
+          <p> {car.hand} </p>
+          <p className="divider--year2"> {car.year} </p>
+          </div>
+          <div class="vl2">
+          <p> {car.name} </p>     {/* <p>Hyundai i20</p> */} 
+          <p>Prestige Automatic 1.0 (100 cc)</p>
+          </div> 
+      </div>
+    
+
+      <div className="hero--container2">
+      {/* <img src={require("../images/pexels-mike-b-120049.jpg")} className="hero_photo" alt="car here" /><br/> */}
+      {/* <img src={"https://th.bing.com/th/id/OIP.kijxKVpEGaFdPWsifdEiFAHaGT?pid=ImgDet&rs=1"} className="hero_photo" alt="car here" /><br/> */}
+      <img src= {car.images} className="hero_photo2" alt="car here" />
+      <img className="imgWhiteLogo2" src={require("../images/yad2logoWhite.png")}  alt="whitelogo here" />
+      </div>
+      </div>
+      {/* <div className="lower_vital_info">
+          <p>2010</p>
+          <p>2</p>
+          <p>1.591</p>
+      </div>
+     */}
+         <div className="lower_vital_info_tag2">
+                <p>cc</p>
+                <p cla>Hands</p>
+                <p>Year</p>
+            </div>
+        <p><span><strong>Updated today</strong></span></p>
+  </section>
+  {/* )} */}
+  
+  </div>
+    )
+}
+// const response = await fetch(`/api/users/${car.ownerId}`);
+
+export default CarDetails
+ 
+
+
+<!-- // // import { Link } from 'react-router-dom';
+// import "./cardetails.css"
+
+
+// const CarDetails = ({ car } ) => {  // props
+//   // const car = props.car
+//   // {console.log(car)};
+//     return (
+//       <div className="car_details">
+//          <p><strong>Name of the Car: </strong>{car.name}</p>
+//          <p><strong>Description of the Car: </strong>{car.description}</p>
+
+//          {/* <p><strong>Owner of the Car: </strong>{car.owner.uname}</p> */}
+ 
+//          <hr/>
+//        </div> 
+//     )
+// }
+// // const response = await fetch(`/api/users/${car.ownerId}`);
+
+// export default CarDetails   -->
+ 
