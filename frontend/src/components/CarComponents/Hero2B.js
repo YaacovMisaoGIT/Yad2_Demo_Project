@@ -53,23 +53,7 @@ const Hero2B = ({ car }) => {
                 <p>Maximum Contamination</p>
             </div>
             <div className="Hero2B_Number">
-                {/* <div className={`Hero2B_Number ${car.contamination >= 1 && car.contamination <= 15 ? 'enlarged' : ''}`}> */}
-                {/* <p className='one'>1</p>
-                <p className='two'>2</p>
-                <p className='three'>3</p>
-                <p className='four'>4</p>
-                <p className='five'>5</p>
-                <p className='six'>6</p>
-                <p className='seven'>7</p>
-                <p className='eight'>8</p>
-                <p className='nine'>9</p>
-                <p className='ten'>10</p>
-                <p className='eleven'>11</p>
-                <p className='twelve'>12</p>
-                <p className='thirteen'>13</p>
-                <p className='fourteen'>14</p>
-                <p className='fifteen'>15</p> */}
-                <p className={`one ${car.contamination === 1 ? 'enlarged' : ''}`}>1</p>
+                {/* <p className={`one ${car.contamination === 1 ? 'enlarged' : ''}`}>1</p>
                 <p className={`two ${car.contamination === 2 ? 'enlarged' : ''}`}>2</p>
                 <p className={`three ${car.contamination === 3 ? 'enlarged' : ''}`}>3</p>
                 <p className={`four ${car.contamination === 4 ? 'enlarged' : ''}`}>4</p>
@@ -83,7 +67,17 @@ const Hero2B = ({ car }) => {
                 <p className={`twelve ${car.contamination === 12 ? 'enlarged' : ''}`}>12</p>
                 <p className={`thirteen ${car.contamination === 13 ? 'enlarged' : ''}`}>13 </p>
                 <p className={`fourteen ${car.contamination === 14 ? 'enlarged' : ''}`}>14</p>
-                <p className={`fifteen ${car.contamination === 15 ? 'enlarged' : ''}`}>15</p>
+                <p className={`fifteen ${car.contamination === 15 ? 'enlarged' : ''}`}>15</p> */}
+
+                {Array.from({ length: 15 }, (_, index) => (
+                    <p
+                        key={index + 1}
+                        className={`number number-${index + 1} ${car.contamination === index + 1 ? 'enlarged' : ''}`}
+                    >
+                        {index + 1}
+                    </p>
+                ))}
+
             </div>
         </div>
             <div className='mistake'>

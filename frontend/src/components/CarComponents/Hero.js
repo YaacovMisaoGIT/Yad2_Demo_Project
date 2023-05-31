@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Hero = ({car}) => {   
+const Hero = ({car, className }) => {   
   return (
     <>
+       {/* <div className={`hero ${className}`}>  */}
       <div className="cardetails--container">
           <div className="vital_info">
             <p className="divider--price"> {car.price} </p>
@@ -29,6 +30,7 @@ const Hero = ({car}) => {
           <p>Year</p>
         </div>
         <p><span><strong>Updated today</strong></span></p>
+        {/* </div> */}
     </>
   )
 }

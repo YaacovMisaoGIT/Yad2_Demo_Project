@@ -36,7 +36,11 @@ const carSchema = mongoose.Schema({
 
     name: {
         type: String,
-        required: [true, 'Please add a name']
+        required: [true, 'Please add a car manufacturer/name']
+    },
+    model: {
+        type: String,
+        required: [true, 'Please add a car model']
     },
     info: {
         type: String,

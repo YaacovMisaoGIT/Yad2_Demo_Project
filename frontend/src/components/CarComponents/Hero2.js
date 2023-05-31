@@ -3,6 +3,7 @@ import "./cardetails.css"
 import TickIcon from '../BooleanValues/TickIcon'; 
 import CrossIcon from '../BooleanValues/CrossIcon'; 
 import * as Icons from 'react-icons/fa' 
+// import {SiPhone} from 'react-icons/si'
 
 const Hero2 = ({car, user}) => {  
     
@@ -45,7 +46,8 @@ const Hero2 = ({car, user}) => {
           <p><span><strong>Updated today</strong></span></p>
           
           <div className="display" onClick={UserHandleClick}>
-           <h2><Icons.FaCarSide /> Display a phone number</h2>
+           <h2><Icons.FaPhone /> Display a phone number</h2>
+           {/* <h2><SiPhone />? Display a phone number</h2> */}
             <div className={`usernameClass ${displayUsername ? 'show' : ''}`}>
               {/* <p className={`username ${displayUsername ? 'show' : ''}`}>{car.owner.userName}</p> */}
               <p className={`username ${displayUsername ? 'show' : ''}`}>{car.user.userName}</p>

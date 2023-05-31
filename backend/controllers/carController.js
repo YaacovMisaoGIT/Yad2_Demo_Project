@@ -6,11 +6,24 @@ const Car = require('../model/carModel')
 // @desc Get Car
 // @route GET /api/cars
 // @access Private
+
 const getCars = asyncHandler(async (req, res) => {
-    // const cars = await Car.find().populate('owner', 'userName userContact userEmail')
-    const cars = await Car.find()
-    res.status(200).json(cars)
-})  
+    const { name } = req.query;
+    let query = {};
+  
+    if (name) {
+      query = { name };
+    }
+  
+    const cars = await Car.find(query);
+    res.status(200).json(cars);
+  });
+  
+// const getCars = asyncHandler(async (req, res) => {
+//     const cars = await Car.find().populate('owner', 'userName userContact userEmail')
+//     const cars = await Car.find()
+//     res.status(200).json(cars)
+// })  
 
 // @desc Get OneCar
 // @route GET /api/cars
@@ -55,6 +68,7 @@ const setCar = asyncHandler(async (req, res) => {
 
         images: req.body.images,
         name: req.body.name,
+        model: req.body.model,
         info: req.body.info,
         description: req.body.description,
         price: req.body.price,

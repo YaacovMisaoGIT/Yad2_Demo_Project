@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/NavbarCompo/Navbar'
 import Home from "./Home"
 import Footer from "./components/FooterComponets/Footer"
-import FilterTop from "./components/Filter/FilterTop"
+import FilterMain from "./components/Filter/FilterMain"
+import NavbarYona from './components/NavbarCompo/NavbarYona'
 
 // const url = 'http://localhost:3001/'
 function App() {
 
    return (
       <>
+      <NavbarYona/>
          <Router>
             {/* <Navbar /> */}
          </Router>
          {/* <TopIframe/> */}
-         <FilterTop/>
+         <FilterMain/>
          <Home/>
          <br /> <br /> <br /> <br /> <br /> <br />
          <Footer />

@@ -535,3 +535,164 @@ height: 102px;
   .iframe__top{
 
   }
+  .number {
+    width: 34px;
+    height: 30px;
+    padding-top: 5px;
+    font-size: 17.5px;
+    color: whitesmoke;
+  }
+  
+  .number.number-1 {
+    background-color: #234031;
+  }
+  
+  .number.number-2 {
+    background-color: #0F5732;
+  }
+  
+  .number.number-3 {
+    background-color: #1C6F3B;
+  }
+  
+  .number.number-4 {
+    background-color: #1C6F3B;
+  }
+  
+  .number.number-5 {
+    background-color: #58A26E;
+  }
+  
+  .number.number-6 {
+    background-color: #179A35;
+  }
+  
+  .number.number-7 {
+    background-color: #49AF24;
+  }
+  
+  .number.number-8 {
+    background-color: #A5CF2D;
+  }
+  
+  .number.number-9 {
+    background-color: #FDEF20;
+  }
+  
+  .number.number-10 {
+    background-color: #F69500;
+  }
+  
+  .number.number-11 {
+    background-color: #F69500;
+  }
+  
+  .number.number-12 {
+    background-color: #EC5B2C;
+  }
+  
+  .number.number-13 {
+    background-color: #EC5B2C;
+  }
+  
+  .number.number-14 {
+    background-color: #CB240F;
+  }
+  
+  .number.number-15 {
+    background-color: #961F2C;
+  }
+   .Hero2B_Number .enlarged {
+    font-size: 19px;
+    width: 40px;
+    height: 36px;
+    margin-top: 10px;  
+    position: relative;
+  }
+     
+     
+
+  /* .Hero2B_Number .enlarged::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5.5px solid transparent;
+    border-right: 5.5px solid transparent;
+    border-bottom: 10px solid;
+    border-top: 10px solid  ;
+  }
+   */
+
+   .Hero2B_Number .enlarged::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 8px solid;
+    border-bottom: 0px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  
+  .Hero2B_Number .enlarged.number-1::before {
+    border-top-color: #234031;
+  }
+  
+  .Hero2B_Number .enlarged.number-2::before {
+    border-top-color: #0F5732;
+  }
+  
+  .Hero2B_Number .enlarged.number-3::before {
+    border-top-color: #1C6F3B;
+  }
+  
+  .Hero2B_Number .enlarged.number-4::before {
+    border-top-color: #1C6F3B;
+  }
+  
+  .Hero2B_Number .enlarged.number-5::before {
+    border-top-color: #58A26E;
+  }
+  
+  .Hero2B_Number .enlarged.number-6::before {
+    border-top-color: #179A35;
+  }
+  
+  .Hero2B_Number .enlarged.number-7::before {
+    border-top-color: #49AF24;
+  }
+  
+  .Hero2B_Number .enlarged.number-8::before {
+    border-top-color: #A5CF2D;
+  }
+  
+  .Hero2B_Number .enlarged.number-9::before {
+    border-top-color: #FDEF20;
+  }
+  
+  .Hero2B_Number .enlarged.number-10::before {
+    border-top-color: #F69500;
+  }
+  
+  .Hero2B_Number .enlarged.number-11::before {
+    border-top-color: #F69500;
+  }
+  
+  .Hero2B_Number .enlarged.number-12::before {
+    border-top-color: #EC5B2C;
+  }
+  
+  .Hero2B_Number .enlarged.number-13::before {
+    border-top-color: #EC5B2C;
+  }
+  
+  .Hero2B_Number .enlarged.number-14::before {
+    border-top-color: #CB240F;
+  }
+  
+  .Hero2B_Number .enlarged.number-15::before {
+    border-top-color: #961F2C;
+  }
