@@ -1,21 +1,25 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-
 import CarDetails from './components/CarComponents/CarDetails'
-import Hero2 from './components/CarComponents/Hero2'
 import FilterMain from "./components/Filter/FilterMain"
 
 function Home() {
   const [cars, setCars] = useState(null)
-  const [users, setUsers] = useState(null)
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
-  const [selectedSort, setSelectedSort] = useState(null);
+  const [selectedSort, setSelectedSort] = useState(null); 
+  // const handleManufacturerSelect = (manufacturer) => {
+  //   setSelectedManufacturer(manufacturer);
+  // }; 
+
+  const handleSearch = (manufacturer) => {
+    setSelectedManufacturer(manufacturer);
+  };
 
 useEffect(() => {
 const fetchCars = async () => {
   let url = '/api/carData';
 
-  // Add filtering parameters to the URL
+  // filtering parameters to the URL
   if (selectedManufacturer !== '') {
     url += `?name=${selectedManufacturer}`;
   }
@@ -31,31 +35,30 @@ const fetchCars = async () => {
 fetchCars();
 }, [selectedManufacturer, selectedSort]);
 
-
-
-
-
-
   return (
     <div className="home">
         <div className="home__flex">
         {/* <iframe className='iframe__leftcorner' src="https://lp7.opl.co.il/Mini/?utm_source=yad2&utm_medium=TV_D&utm_campaign=opl"/> */}
-        {/* <FilterTop/> */}
 
         <FilterMain
           car={cars}
-          onManufacturerSelect={(manufacturer) => {
-            setSelectedManufacturer(manufacturer);
-          }}
+          // onManufacturerSelect={(manufacturer) => {
+          //   handleManufacturerSelect(manufacturer);
+          // }}
+          onSearch={handleSearch} 
+
           onYearSelect={(name, value) => {
-            // Handle year select logic
+         
           }}
+
           onPriceRangeChange={({ min, max }) => {
-            // Handle price range change logic
+             
           }}
+
           onAreaSelect={(area) => {
-            // Handle area select logic
+            
           }}
+          
           onSortSelect={(sort) => {
             setSelectedSort(sort);
           }}
@@ -70,15 +73,7 @@ fetchCars();
         </div>
     </div>
   ) 
-  return (
-    <div className='home'>
-        <div className='users'>
-           {users && users?.map((user) => (
-            <Hero2 key= {user?._id} user = {user} />
-          ))}  
-        </div>
-    </div>
-  )
+ 
 }
 
 export default Home

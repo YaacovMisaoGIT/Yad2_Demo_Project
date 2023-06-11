@@ -15,9 +15,10 @@ const FilterMain = ({
   onPriceRangeChange,
   onAreaSelect,
   onSortSelect,
+  onSearch
 }) => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
-  const [isSearchClicked, setIsSearchClicked] = useState(false); 
+  const [isSearchClicked, setIsSearchClicked] = useState(true); 
   
   const handleManufacturerSelect = (manufacturer) => {
     setSelectedManufacturer(manufacturer);
@@ -92,6 +93,7 @@ const FilterMain = ({
     const filteredResults = []; // Replace this with your filter logic
     setFilteredCars(filteredResults);
     setIsSearchClicked(true); 
+    onSearch(selectedManufacturer);
   };
 
   return (
