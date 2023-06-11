@@ -6,13 +6,15 @@ import FilterMain from "./components/Filter/FilterMain"
 function Home() {
   const [cars, setCars] = useState(null)
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
+  const [selectedModel, setSelectedModel] = useState('');    
   const [selectedSort, setSelectedSort] = useState(null); 
   // const handleManufacturerSelect = (manufacturer) => {
   //   setSelectedManufacturer(manufacturer);
   // }; 
 
-  const handleSearch = (manufacturer) => {
+  const handleSearch = (manufacturer, model) => {
     setSelectedManufacturer(manufacturer);
+    setSelectedModel(model);
   };
 
 useEffect(() => {
@@ -22,6 +24,10 @@ const fetchCars = async () => {
   // filtering parameters to the URL
   if (selectedManufacturer !== '') {
     url += `?name=${selectedManufacturer}`;
+    // url += `?manufacturer=${selectedManufacturer}`;
+    if (selectedModel !== '') {
+      url += `&model=${selectedModel}`;
+    }
   }
 
   const response = await fetch(url);
@@ -33,7 +39,7 @@ const fetchCars = async () => {
 };
 
 fetchCars();
-}, [selectedManufacturer, selectedSort]);
+}, [selectedManufacturer, selectedModel, selectedSort]);
 
   return (
     <div className="home">

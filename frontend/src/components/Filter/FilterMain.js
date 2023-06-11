@@ -11,17 +11,20 @@ import Hero2B from '../CarComponents/Hero2B.js';
 const FilterMain = ({
   car,
   onManufacturerSelect,
+  onModelSelect,
   onYearSelect,
   onPriceRangeChange,
   onAreaSelect,
   onSortSelect,
   onSearch
 }) => {
-  const [selectedManufacturer, setSelectedManufacturer] = useState('');
+  const [selectedManufacturer, setSelectedManufacturer] = useState(''); 
+  const [selectedModel, setSelectedModel] = useState('');
   const [isSearchClicked, setIsSearchClicked] = useState(true); 
   
   const handleManufacturerSelect = (manufacturer) => {
     setSelectedManufacturer(manufacturer);
+    setSelectedModel(''); // Reset the selected model when a new manufacturer is selected
     onManufacturerSelect(manufacturer);
   };
 
@@ -93,8 +96,28 @@ const FilterMain = ({
     const filteredResults = []; // Replace this with your filter logic
     setFilteredCars(filteredResults);
     setIsSearchClicked(true); 
-    onSearch(selectedManufacturer);
+    onSearch(selectedManufacturer, selectedModel);
   };
+  const handleModelSelect = (model) => {
+    setSelectedModel(model);
+  }  
+
+  // const handleSearch = () => {
+  //   const filteredResults = car.filter((item) => {
+  //     if (selectedManufacturer !== '' && selectedModel !== '') {
+  //       return (
+  //         item.manufacturer === selectedManufacturer &&
+  //         item.model === selectedModel
+  //       );
+  //     }
+  //     if (selectedManufacturer !== '') {
+  //       return item.manufacturer === selectedManufacturer;
+  //     }
+  //     return true;
+  //   });
+  //   setFilteredCars(filteredResults);
+  //   setIsSearchClicked(true);
+  // };
 
   return (
     <>
@@ -121,7 +144,12 @@ const FilterMain = ({
 
         <div className="filter-item">
           <label>Model</label>
-          <select>
+          <select
+           disabled={!selectedManufacturer} // Disable the Model dropdown if no Manufacturer is selected
+          //  onChange={(e) => handleModelSelect(e.target.value)}
+           onChange={(e) => setSelectedModel(e.target.value)}
+           value={selectedModel}
+           >
             <option value="">Model</option>
             {renderModelOptions()}
           </select>
@@ -202,7 +230,7 @@ const FilterMain = ({
             // <Hero key={car.id} car={car} />
             // <Hero key={car.id} car={car} className="rendered-hero"/>
             // <CarDetails car={car} />
-            
+           
             <CarDetails car={car} key={car.id}>
               <Hero className="hero"/>
               <Hero2 />
