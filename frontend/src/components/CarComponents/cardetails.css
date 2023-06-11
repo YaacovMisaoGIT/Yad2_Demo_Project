@@ -6,29 +6,21 @@
     font-family: Rubik,sans-serif
 }
 
-.hero:hover span {
+/* .hero:hover span {
     display: none;
-}
+} */
 
-.hero:hover:after {
+/* .hero:hover:after {
     margin-top: 10px;
     content: "Click for details";
     color: #FF7100;
     font-weight: bolder;
     cursor: pointer;
-}
+} */
 
-.hero {
-    margin-top: 0.03rem;
-    margin-left: -240px;
-    margin-right: -500px;
-    padding: 30px 0px 0px 18px;
-    background-color: #FDF9C5;
-    height: 6.5rem;
-    width: 880px;
-}
+ 
 
-.hero:hover {
+/* .hero:hover {
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
@@ -81,7 +73,7 @@
     display: flex;
     margin-left: 205px;
     gap: 12px;
-}
+} */
 
 .hr--price {
     /* width: 2px;  
@@ -115,13 +107,76 @@ height: 102px;
     display: none;
     visibility: hidden;
 } */
+/* New CSS for the rendered Hero component */
+ 
+.hero {
+  margin-top: 0.03rem;
+  margin-left: -880px;
+  margin-right: -500px;
+  padding: 30px 0px 0px 18px;
+  background-color: #FDF9C5;
+  height: 6.5rem;
+  width: 880px;
+}
+.hero .cardetails--container {
+  margin-left: -20rem;
+}
 
+  .hero .hero--container img {
+  margin-left:  64em;
+  margin-top: -4.1em;
+  margin-bottom: em;
+  width: 150px;
+  height: 90px;
+  border-radius: 4%;
+}
+
+.hero .imgWhiteLogo {
+  position: relative;
+  top: -15px;
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+
+.hero .vital_info {
+  margin-left: 20rem;
+  display: flex;
+  column-gap: 10px;
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+}
+
+.hero .lower_vital_info {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.hero .divider--enginesize {
+  display: flex;
+  margin-left: 0px;
+  margin-right: -2px;
+  gap: 21px;
+}
+
+.hero .lower_vital_info_tag {
+  font-family: Rubik, sans-serif;
+  margin-top: -3.7rem;
+  display: flex;
+  margin-left: 205px;
+  gap: 12px;
+}
+
+.hero .hero:hover {
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+/*End of ---  New CSS for the rendered Hero component */
 
 /* Hero Two ======================================== */
  
 .hero2 {
     margin-top: .09rem;
-    margin-left: -238px;
+    margin-left: -880px;
     padding: 30px 0px 0px 18px;
     background-color: #FDF9C5;
     height: 11.5rem;
@@ -292,7 +347,7 @@ height: 102px;
 }
 
 .Hero2B {
-    margin-left: -14.8rem;
+    margin-left: -55rem;
     margin-top: -1rem ;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); 
     height: 970px;
@@ -515,7 +570,7 @@ height: 102px;
     padding-top: 20px;
     margin-top: -2px;
     margin-bottom: 12px;
-    margin-left: -237px;
+    margin-left: -882px;
 }
 .mistake p{
     margin-left: 25px;

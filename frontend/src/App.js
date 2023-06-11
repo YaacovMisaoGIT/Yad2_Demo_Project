@@ -5,19 +5,21 @@ import Home from "./Home"
 import Footer from "./components/FooterComponets/Footer"
 import FilterMain from "./components/Filter/FilterMain"
 import NavbarYona from './components/NavbarCompo/NavbarYona'
+import './index.css'
 
 // const url = 'http://localhost:3001/'
 function App() {
 
    return (
       <>
-      <NavbarYona/>
+         {/* <NavbarYona /> */}
          <Router>
             {/* <Navbar /> */}
          </Router>
          {/* <TopIframe/> */}
-         <FilterMain/>
-         <Home/>
+         {/* <FilterMain/> */}
+      
+            <Home />
          <br /> <br /> <br /> <br /> <br /> <br />
          <Footer />
       </>

@@ -416,23 +416,23 @@ export const navItems = [
         
           {
               name2: "Homes for Sales",
-              id: 1.5
+              
           },
           {
               name2: "Apartments for rent",
-              id : 1.6
+              
           },
           {
               name2: "Commercial real estate",
-              id : 1.7
+               
           },
           {
               name2: " Partners",
-              id : 1.8
+              
           },
           {
               name2: "Search on map",
-              id : 1.9
+               
           },
          
       ]  

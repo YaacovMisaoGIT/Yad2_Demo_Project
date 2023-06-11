@@ -1,5 +1,6 @@
 import './filter.css';
-import '../CarComponents/CarDetails'
+import '../CarComponents/cardetails.css'
+import CarDetails from '../CarComponents/CarDetails';
 import React, { useState } from 'react';
 import { Area, Manufacturer, sortOptions } from './FilterData'; 
 import SuperFilter from './SuperFilter';
@@ -16,7 +17,8 @@ const FilterMain = ({
   onSortSelect,
 }) => {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
-
+  const [isSearchClicked, setIsSearchClicked] = useState(false); 
+  
   const handleManufacturerSelect = (manufacturer) => {
     setSelectedManufacturer(manufacturer);
     onManufacturerSelect(manufacturer);
@@ -86,18 +88,11 @@ const FilterMain = ({
 
   const [filteredCars, setFilteredCars] = useState([]);
 
-  const handleSearch = async () => {
-    if (selectedManufacturer !== '') {
-      try {
-        const response = await fetch(`/api/carData?name=${selectedManufacturer}`);
-        const cars = await response.json();
-        setFilteredCars(cars);
-      } catch (error) {
-        console.error('Error retrieving car data:', error);
-      }
-    }
+  const handleSearch = () => {
+    const filteredResults = []; // Replace this with your filter logic
+    setFilteredCars(filteredResults);
+    setIsSearchClicked(true); 
   };
-  
 
   return (
     <>
@@ -196,23 +191,21 @@ const FilterMain = ({
       </div>
 {/* =========sort======== */}
    {/* Render filtered cars */}
-   {/* {filteredCars.length > 0 && (
-        <div>
-          <h3>Filtered Cars:</h3>
-          <ul>
-            {filteredCars.map((car) => (
-              <li key={car.id}>{car.name}</li>
-            ))}
-          </ul>
-        </div>
-      )} */}
 
-{filteredCars.length > 0 && (
+
+{isSearchClicked && filteredCars.length > 0 && (
         <div>
           <h3>Filtered Cars:</h3>
           {filteredCars.map((car) => (
             // <Hero key={car.id} car={car} />
-            <Hero key={car.id} car={car} className="filtered-hero"/>
+            // <Hero key={car.id} car={car} className="rendered-hero"/>
+            // <CarDetails car={car} />
+            
+            <CarDetails car={car} key={car.id}>
+              <Hero className="hero"/>
+              <Hero2 />
+              <Hero2B />
+            </CarDetails>
           ))}
         </div>
       )}
