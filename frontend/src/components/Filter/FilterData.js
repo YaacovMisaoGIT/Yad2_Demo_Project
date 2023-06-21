@@ -12,6 +12,10 @@ export const Manufacturer = [
   {
     name: "Tesla",
     models: ["Model Y", "Model X", "Model 3"]
+  },
+  {
+    name: "Audi",
+    models: ["Model Y", "Model X", "Model 3"]
   }
 ];
 

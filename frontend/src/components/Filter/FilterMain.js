@@ -1,27 +1,31 @@
 import './filter.css';
-import '../CarComponents/cardetails.css'
+// import '../CarComponents/cardetails.css';
 import CarDetails from '../CarComponents/CarDetails';
 import React, { useState } from 'react';
-import { Area, Manufacturer, sortOptions } from './FilterData'; 
+import { Area, Manufacturer, sortOptions } from './FilterData';
 import SuperFilter from './SuperFilter';
-import Hero from '../CarComponents/Hero.js'; 
-import Hero2 from '../CarComponents/Hero2.js'; 
-import Hero2B from '../CarComponents/Hero2B.js'; 
+import Hero from '../CarComponents/Hero.js';
+import Hero2 from '../CarComponents/Hero2.js';
+import Hero2B from '../CarComponents/Hero2B.js';
+import YearFilter from './SmallFilters/YearFilter';
+import PriceFilter from './SmallFilters/PriceFilter';
+import AreaFilter from './SmallFilters/AreaFilter'; // Import the AreaFilter component
+import LeftFilter from './SmallFilters/LeftFilter';
+
 
 const FilterMain = ({
   car,
   onManufacturerSelect,
-  onModelSelect,
   onYearSelect,
   onPriceRangeChange,
   onAreaSelect,
   onSortSelect,
   onSearch
 }) => {
-  const [selectedManufacturer, setSelectedManufacturer] = useState(''); 
+  const [selectedManufacturer, setSelectedManufacturer] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
-  const [isSearchClicked, setIsSearchClicked] = useState(true); 
-  
+  const [isSearchClicked, setIsSearchClicked] = useState(true);
+
   const handleManufacturerSelect = (manufacturer) => {
     setSelectedManufacturer(manufacturer);
     setSelectedModel(''); // Reset the selected model when a new manufacturer is selected
@@ -48,35 +52,6 @@ const FilterMain = ({
     ));
   };
 
-  const handleYearSelect = (e) => {
-    const { name, value } = e.target;
-    onYearSelect(name, value);
-  };
-
-  const handlePriceRangeChange = (e) => {
-    const { min, max } = e.target.value;
-    onPriceRangeChange({ min, max });
-  };
-
-  const handleAreaSelect = (area) => {
-    onAreaSelect(area);
-  };
-
-  const generateYearOptions = (startYear, endYear) => {
-    const options = [];
-    for (let year = startYear; year <= endYear; year++) {
-      options.push(
-        <option key={year} value={year}>
-          {year}
-        </option>
-      );
-    }
-    return options;
-  };
-
-  const currentYear = new Date().getFullYear();
-  const years = generateYearOptions(2000, currentYear);
-
   const [selectedSort, setSelectedSort] = useState(null);
   const [isSortDropdownOpen, setIsSortDropdownOpen] = useState(false);
 
@@ -95,40 +70,20 @@ const FilterMain = ({
   const handleSearch = () => {
     const filteredResults = []; // Replace this with your filter logic
     setFilteredCars(filteredResults);
-    setIsSearchClicked(true); 
+    setIsSearchClicked(true);
     onSearch(selectedManufacturer, selectedModel);
   };
-  const handleModelSelect = (model) => {
-    setSelectedModel(model);
-  }  
-
-  // const handleSearch = () => {
-  //   const filteredResults = car.filter((item) => {
-  //     if (selectedManufacturer !== '' && selectedModel !== '') {
-  //       return (
-  //         item.manufacturer === selectedManufacturer &&
-  //         item.model === selectedModel
-  //       );
-  //     }
-  //     if (selectedManufacturer !== '') {
-  //       return item.manufacturer === selectedManufacturer;
-  //     }
-  //     return true;
-  //   });
-  //   setFilteredCars(filteredResults);
-  //   setIsSearchClicked(true);
-  // };
 
   return (
     <>
       <div>
-                <iframe
-          className='iframe__top'
+        <iframe
+          className="iframe__top"
           src="https://creative.budget.co.il/budget_28-3-2023/?LinkID=Yad2&utm_source=YAD2&utm_medium=930_180_Banner&utm_campaign=salesevent"
         />
       </div>
       <div className="filter-top">
-        <div className='hello'>
+        <div className="hello">
           <div className="filter-item">
             <label>Manufacturer</label>
             <select onChange={(e) => handleManufacturerSelect(e.target.value)}>
@@ -145,101 +100,38 @@ const FilterMain = ({
         <div className="filter-item">
           <label>Model</label>
           <select
-           disabled={!selectedManufacturer} // Disable the Model dropdown if no Manufacturer is selected
-          //  onChange={(e) => handleModelSelect(e.target.value)}
-           onChange={(e) => setSelectedModel(e.target.value)}
-           value={selectedModel}
-           >
+            disabled={!selectedManufacturer} // Disable the Model dropdown if no Manufacturer is selected
+            onChange={(e) => setSelectedModel(e.target.value)}
+            value={selectedModel}
+          >
             <option value="">Model</option>
             {renderModelOptions()}
           </select>
         </div>
 
-        <div className="filter-item">
-          <label>Year Range:</label>
-          <div>
-            <select
-              name="fromYear"
-              onChange={handleYearSelect}
-              defaultValue=""
-            >
-              <option value="">From</option>
-              {years}
-            </select>
-            <select
-              name="untilYear"
-              onChange={handleYearSelect}
-              defaultValue=""
-            >
-              <option value="">Until</option>
-              {years}
-            </select>
-          </div>
-        </div>
+        <YearFilter onYearSelect={onYearSelect} />
 
-        <div className="filter-item">
-          <label>Price </label>
-          <div className="filter_price">
-            <input
-              type="number"
-              placeholder="--From"
-              onChange={handlePriceRangeChange}
-            />
-            <input
-              type="number"
-              placeholder="--Until"
-              onChange={handlePriceRangeChange}
-            />
-          </div>
-        </div>
+        <PriceFilter onPriceRangeChange={onPriceRangeChange} />
 
-        <div className="filter-item">
-          <label>Area </label>
-          <select onChange={(e) => handleAreaSelect(e.target.value)}>
-            <option value="">Choose an area</option>
-            {Area.map((item) => (
-              <option key={item.name} value={item.name}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        </div>
-      <button onClick={handleSearch}>Search</button>
-      </div>  
-      
-  {/* =========sort======== */}
-      <div className="sort-item">
-        <p>Sort by</p>
-        <select onChange={(e) => handleSortSelect(e.target.value)}>
-          <option value="">By date</option>
-          {sortOptions.map((item) => (
-            <option key={item.value} value={item.value}>
-              {item.label}
-            </option>
-          ))}
-        </select>
+        <AreaFilter Area={Area} onAreaSelect={onAreaSelect} />
+
+        <button onClick={handleSearch}>Search</button>
       </div>
-{/* =========sort======== */}
-   {/* Render filtered cars */}
 
+      <LeftFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
 
-{isSearchClicked && filteredCars.length > 0 && (
+      {isSearchClicked && filteredCars.length > 0 && (
         <div>
           <h3>Filtered Cars:</h3>
           {filteredCars.map((car) => (
-            // <Hero key={car.id} car={car} />
-            // <Hero key={car.id} car={car} className="rendered-hero"/>
-            // <CarDetails car={car} />
-           
             <CarDetails car={car} key={car.id}>
-              <Hero className="hero"/>
+              <Hero className="hero" />
               <Hero2 />
               <Hero2B />
             </CarDetails>
           ))}
         </div>
       )}
-
     </>
   );
 };
