@@ -1,71 +1,61 @@
-/* CSS file or inline styles */
 .navbar-container {
-    border: 1px solid gray;
-    background-color: #f8f8f8;
-    padding: 10px;
-  }
-  
-  .navbar-item {
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
-  }
-  
-  .navbar-heading {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .navbar-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 400px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-  }
-  
-  .navbar-list-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 5px;
-    /* display: flex; */
-    /* align-items: flex-start; */
-  }
-  /* .navbar-name2 {
-    grid-column-start: 2;
-  } */
-  
-  .navbar-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
-  
-  .navbar-item:hover .navbar-heading {
-    background-color: lightgray;
-  }
-  
-  .navbar-name {
-    /* Add your name styles here */
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-name2 { 
-    /* Add your name2 styles here */
-    display: flex;
-    align-items: flex-start;
-    margin-top: 0;
-  }
-  
-  .navbar-column {
-    /* Add your column styles here */
-    flex: 1;  
-  }
-  .navbar-column.navbar-name2{
-   
+  border: 1px solid gray;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.navbar-item {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.navbar-heading {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navbar-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 500px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex; /* Add this to make columns side by side */
+}
+
+.navbar-list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px;
+}
+
+.navbar-icon {  
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: px;
+}
+
+.navbar-item:hover .navbar-heading {
+  background-color: lightgray;
+}
+
+.navbar-name {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* overflow: hidden;  */
+}
+
+.navbar-column1 {
+  flex: 1;
+}
+
+.navbar-column2 {
+  flex: 1;
 }
