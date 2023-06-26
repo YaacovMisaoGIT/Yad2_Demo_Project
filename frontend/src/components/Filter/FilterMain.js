@@ -10,7 +10,7 @@ import Hero2B from '../CarComponents/Hero2B.js';
 import YearFilter from './SmallFilters/YearFilter';
 import PriceFilter from './SmallFilters/PriceFilter';
 import AreaFilter from './SmallFilters/AreaFilter'; // Import the AreaFilter component
-import LeftFilter from './SmallFilters/LeftFilter';
+import RightFilter from './SmallFilters/RightFilter';
 
 
 const FilterMain = ({
@@ -118,7 +118,7 @@ const FilterMain = ({
         <button onClick={handleSearch}>Search</button>
       </div>
 
-      <LeftFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
+      <RightFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
 
       {isSearchClicked && filteredCars.length > 0 && (
         <div>

@@ -1,0 +1,26 @@
+/* ===sort===== */
+.sort-item{
+  margin-left: 70.3em;
+  margin-top: -30px;
+}
+.sort-item p{
+  margin-left: -3.5em;
+  position: absolute;
+  padding-top: 4px;
+}
+
+
+/* ====Filter===== */
+.filter button{
+  padding: 5px  10px;
+  background-color: white;
+}
+.filter button:hover{
+  
+}
+  .filter{
+    margin-left: 31.5rem;
+    margin-top: -3rem;
+  }
+
+  
