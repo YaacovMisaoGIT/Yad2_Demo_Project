@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import CarDetails from './components/CarComponents/CarDetails'
 import FilterMain from "./components/Filter/FilterMain"
 import FilterBottom from './components/Filter/FilterBottom'
 
@@ -9,9 +8,7 @@ function Main() {
   const [selectedManufacturer, setSelectedManufacturer] = useState('');
   const [selectedModel, setSelectedModel] = useState('');    
   const [selectedSort, setSelectedSort] = useState(null); 
-  // const handleManufacturerSelect = (manufacturer) => {
-  //   setSelectedManufacturer(manufacturer);
-  // }; 
+ 
   
   const handleSearch = (manufacturer, model) => {
     setSelectedManufacturer(manufacturer);
@@ -42,32 +39,6 @@ const fetchCars = async () => {
 fetchCars();
 }, [selectedManufacturer, selectedModel, selectedSort]);
 
-// === below codes to dsave json file to component===== 
-// useEffect(() => {
-//   const saveCarsToFile = async () => {
-//     if (cars) {
-//       const jsonData = JSON.stringify(cars);
-//       const filePath = './components/cars.json';
-
-//       try {
-//         await fetch('/api/saveCarsToFile', {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify({ data: jsonData, filePath }),
-//         });
-
-//         console.log('File saved successfully');
-//       } catch (error) {
-//         console.error('Error saving file:', error);
-//       }
-//     }
-//   };
-
-//   saveCarsToFile();
-// }, []);
-
 
   return (
     <div className="home">
@@ -92,13 +63,6 @@ fetchCars();
             setSelectedSort(sort);
           }}
           />
-      
-
-        {/* <div className='cars'>
-          {cars && cars.map((car) => (
-            <CarDetails key= {car._id} car = {car} />
-          ))}  
-        </div> */}
        <FilterBottom cars ={cars}/>
         </div>
     </div>

@@ -1,18 +1,55 @@
 GET http://localhost:5003/api/carData
 
 ###
-GET http://localhost:5003/api/carData/63fe525ab4e49397be455103
+GET http://localhost:5003/api/carData/64621d71110e98e4781e45a4
 
 ###
 POST http://localhost:5003/api/carData
 Content-Type: "application/json"
 
 {
-    "name": "Mazda",
-    "price": "65,000",
-    "hand": 2,
-    "year": 2019,
-    "engineSize": "1,248",
+  "abs": false,
+  "airBags": true,
+  "airConditioner": true,
+  "automaticLightning": true,
+  "auxiliaryBrakeSystem": true,
+  "beltSensors": true,
+  "color": "ivory white",
+  "contamination": 9,
+  "currentOwnership": "private",
+  "description": "Tesla-EV6 , equipment level, keyless entry/exit button drive, side steps, panoramic roof, reverse camera+sensors, on-board computer, rear TV screens, split climate control, rear seat air conditioning, cruise control, locking folding mirrors, light sensors+ Rain, dark gray leather seats. When you approach the car, the mirrors open with light from the mirrors and from the door handles. 2 license plates, test 25.6.23, vehicle kept from single driver details (not used as main ",
+  "electricWindows": true,
+  "engineSize": 4120,
+  "engineType": "gasoline",
+  "firstDay": "04/2016",
+  "fourIntoTwo": true,
+  "gearbox": "automation",
+  "hand": 1,
+  "identifyTrafficSign": false,
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/8/82/Tesla_Model_X_front_view_(16042113157).jpg"
+  ],
+  "info": "Tesla-EV6",
+  "lastDay": "09/2023",
+  "magnesiumWheels": true,
+  "mileAge": 50000,
+  "model": "Model X",
+  "name": "Tesla",
+  "pedestrianDetection": true,
+  "powerSteering": false,
+  "previousOwnership": "private",
+  "price": 121000,
+  "reverseCamera": false,
+  "roofWindow": true,
+  "salesArea": "Maalot",
+  "stabilityControl": true,
+  "tirePressureSensors": true,
+  "user": {
+    "userEmail": "email@email.com",
+    "userNumber": 12345678
+  },
+  "year": 2021
 }
+
 
 ###

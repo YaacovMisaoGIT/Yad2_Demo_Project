@@ -38,7 +38,7 @@ const FilterBottom = ({ cars }) => {
   };
 
   return (
-    <div className='compon'>
+    <div className='filter_bottom'>
       <div className="cars">{renderCars()}</div>
       <div>
         <button className='next' onClick={handleNextPage} disabled={currentPage === totalPages}>

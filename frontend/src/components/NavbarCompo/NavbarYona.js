@@ -23,25 +23,29 @@ function NavbarYona() {
           onMouseLeave={handleMouseLeave}
         >
           <div className="navbar-heading">{item.heading}</div>
-          {activeItem === item.id && (
+          {activeItem === item.id && item.heading !== "Second Hand Magazine" && (
             <div className="navbar-list">
-              <div className="navbar-column1">
-                {item.list1.map((item) => (
-                  <div key={item.id} className="navbar-list-item">
-                    <span className="navbar-column navbar-name">{item.name}</span>
-                    {item.icon && (
-                      <img className="navbar-icon" src={item.icon} alt={item.name} />
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="navbar-column2">
-                {item.list2.map((item) => (
-                  <div key={item.id} className="navbar-list-item">
-                    <span className="navbar-column navbar-name">{item.name}</span>
-                  </div>
-                ))}
-              </div>
+              {item.list1 && (
+                <div className="navbar-column1">
+                  {item.list1.map((subItem) => (
+                    <a href="#" key={subItem.id} className="navbar-list-item">
+                      <span className="navbar-column navbar-name">{subItem.name}</span>
+                      {subItem.icon && (
+                        <img className="navbar-icon" src={subItem.icon} alt={subItem.name} />
+                      )}
+                    </a>
+                  ))}
+                </div>
+              )}
+              {item.list2 && (
+                <div className="navbar-column2">
+                  {item.list2.map((subItem) => (
+                    <a href="#" key={subItem.id} className="navbar-list-item">
+                      <span className="navbar-column navbar-name">{subItem.name}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>

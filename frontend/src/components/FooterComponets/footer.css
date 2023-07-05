@@ -4,8 +4,10 @@
   padding:0;
   /* overflow: hidden; */
   /* font-family: 'PT Sans', sans-serif; */
+} 
+.footer_wrapper{
+   margin-top: 42rem;
 }
-
 body {
   margin: 0;
 }

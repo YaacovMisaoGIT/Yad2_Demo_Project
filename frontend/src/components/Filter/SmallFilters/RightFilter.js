@@ -6,7 +6,7 @@ import * as Icons from 'react-icons/fa'
 const RightFilter = ({ handleSortSelect, sortOptions }) => {
  
   return (
-    <div className="container"> 
+    <div className="filter_container"> 
       <div className="filter">
         <p>Filter search<Icons.FaFunnelDollar /></p>
       </div>

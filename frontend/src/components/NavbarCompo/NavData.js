@@ -56,12 +56,12 @@ export const navItems = [
          id: 2,
         list1: [
               {
-                name: "Vihicle catalog",
+                name: "Vehicle catalog",
                 icon: "https://assets.yad2.co.il/yad2site/y2assets/images/header/header_jeep.svg",
                 id: 2.1
             },
             {
-                name:"Vihicle Price List",
+                name:"Vehicle Price List",
                 icon: "https://assets.yad2.co.il/yad2site/y2assets/images/header/header_car%20price.svg",
                 id: 2.2
             },
@@ -286,8 +286,7 @@ export const navItems = [
                   name: "for all bussinesses",
                   id: 5.6
               }
-        ],
-        list2: []
+        ] 
     },
     {
         heading:  "Pets",
@@ -333,8 +332,7 @@ export const navItems = [
               name: "ferrets",
               id: 6.10
           }
-        ],
-        list2: []
+        ] 
     },
     {
         heading: "Professional",
@@ -384,13 +382,10 @@ export const navItems = [
               name: "For all prfessionals",
               id: 7.11
           },
-        ],
-        list2: []
+        ] 
     },
     {
         heading: "Second Hand Magazine",
-        id: 8,
-        list1: [],
-        list2: []
+        id: 8 
     } 
 ]

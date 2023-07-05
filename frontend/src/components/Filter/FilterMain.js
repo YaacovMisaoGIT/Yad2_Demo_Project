@@ -11,6 +11,7 @@ import YearFilter from './SmallFilters/YearFilter';
 import PriceFilter from './SmallFilters/PriceFilter';
 import AreaFilter from './SmallFilters/AreaFilter'; // Import the AreaFilter component
 import RightFilter from './SmallFilters/RightFilter';
+import LeftCornerMost from '../Advertisements/LeftCornerMost';
 
 
 const FilterMain = ({
@@ -77,6 +78,11 @@ const FilterMain = ({
   return (
     <>
       <div>
+        <div className="above_iframe">
+          <img 
+             src= "../images/aboveiframe.png" 
+          />
+        </div>
         <iframe
           className="iframe__top"
           src="https://creative.budget.co.il/budget_28-3-2023/?LinkID=Yad2&utm_source=YAD2&utm_medium=930_180_Banner&utm_campaign=salesevent"
@@ -84,7 +90,7 @@ const FilterMain = ({
       </div>
       <div className="filter-top">
         <div className="hello">
-          <div className="filter-item">
+          <div className="filter-item">   
             <label>Manufacturer</label>
             <select onChange={(e) => handleManufacturerSelect(e.target.value)}>
               <option value="">manufacturer</option>
@@ -115,23 +121,58 @@ const FilterMain = ({
 
         <AreaFilter Area={Area} onAreaSelect={onAreaSelect} />
 
-        <button onClick={handleSearch}>Search</button>
+        <button className="allpurpose_button" onClick={handleSearch}>Search  &#x26B2;</button>
+        <div className="image-container-left">
+          <img
+            src="../images/side_images.png"
+          />
+        </div>
+        <div className="image-container-right">
+          <img
+            src="../images/side_images.png"
+          />
+        </div>
+        <div className="image-container-fressbe">
+          <img 
+            src="../images/fressbe.png"
+          />
+        </div> 
+        <div className="image-container-sidefull1">
+          <img 
+            src="../images/sidefull1.png"
+          />
+           <div className="image-container-sidefull2">
+          <img 
+            src="../images/sidefull2.png"
+          />
+        </div>
+        </div> 
+       
+        <div className="image-container-bottom">
+          <img 
+            src="../images/bottom.png"
+          />
+        </div> 
       </div>
 
-      <RightFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
+        <RightFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
 
       {isSearchClicked && filteredCars.length > 0 && (
         <div>
           <h3>Filtered Cars:</h3>
-          {filteredCars.map((car) => (
-            <CarDetails car={car} key={car.id}>
-              <Hero className="hero" />
-              <Hero2 />
-              <Hero2B />
-            </CarDetails>
-          ))}
+          <div className='filter_cardetails'>
+            {filteredCars.map((car) => (
+              <CarDetails car={car} key={car.id}>
+                <LeftCornerMost />
+                <Hero className="hero" />
+                <Hero2 />
+                <Hero2B />
+              </CarDetails>
+            ))}
+          </div>
         </div>
       )}
+
     </>
   );
 };

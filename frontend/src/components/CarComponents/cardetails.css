@@ -5,6 +5,11 @@
     /* overflow: hidden; */
     font-family: Rubik,sans-serif
 }
+ 
+.hero_wrapper{
+  margin-top: 0px ;
+}
+ 
 
 /* .hero:hover span {
     display: none;

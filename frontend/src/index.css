@@ -8,6 +8,7 @@
 
 body {
     margin: 0;
+    background-color:  #F9F9F9;
 }
 
 nav {
@@ -75,7 +76,7 @@ header a {
 } 
 
 .home {
-  /* margin-top: -280px; */
+  margin-top: 8px;
 }
 
 /* =====iFrame in App.js ====  */

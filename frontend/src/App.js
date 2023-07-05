@@ -12,7 +12,7 @@ function App() {
 
    return (
       <>
-         <NavbarYona />
+         {/* <NavbarYona />  */}
          <Router>
          </Router>
          <Main />  <br /> <br />

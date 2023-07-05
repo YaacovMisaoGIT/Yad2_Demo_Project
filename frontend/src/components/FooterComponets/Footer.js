@@ -5,7 +5,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <>
-    <footer>
+    <footer className="footer_wrapper">
       <div className='footer--para'>
       {FooterData.map((item) =>(
             <p>{item.welcomeMsg}</p>

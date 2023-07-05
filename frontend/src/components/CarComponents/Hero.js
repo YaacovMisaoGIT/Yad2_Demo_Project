@@ -4,6 +4,7 @@ const Hero = ({car, className }) => {
   return (
     <>
        {/* <div className={`hero ${className}`}>  */}
+       <div className="car-details-wrapper"> 
       <div className="cardetails--container">
           <div className="vital_info">
             <p className="divider--price"> {car.price} </p>
@@ -28,6 +29,7 @@ const Hero = ({car, className }) => {
           <p>cc</p>
           <p cla>Hands</p>
           <p>Year</p>
+        </div>
         </div>
         <p><span><strong>Updated today</strong></span></p>
         {/* </div> */}
