@@ -1,5 +1,4 @@
-
-.filter-top {  
+.filter-top {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +11,7 @@
   height: 120px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   padding: 7px;
+  position: relative;
   /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ; */
 }
@@ -27,8 +27,42 @@
 }
 
 .hello {
-  margin-left: 500px;
+  margin-left: 100px;
+  /*move left-r*/
   margin-top: 0px;
+  /* flex-grow: 1; */
+}
+
+.search-button-container {
+  margin-left: 58.7rem;
+  /*move left-r*/
+  display: flex;
+  justify-content: flex-end;
+  /* Align the button to the right */
+  align-items: center;
+  /* Center the button vertically */
+  margin-right: 7px;
+  /* Adjust the margin as needed */
+}
+
+.advanced_search {
+  margin-top: 2.3rem;
+}
+
+.advanced_searchbutton {
+  padding: 5px 18px;
+  font-size: 15px;
+}
+
+/* ======button======= */
+.allpurpose_button {
+  margin-top: -899px;
+  background-color: #FF7100;
+  color: white;
+  padding: 7px 15px 7px 10px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
 }
 
 label {
@@ -63,7 +97,7 @@ input[type='number'] {
   cursor: pointer;
 }
 
-/* ===sort===== */ 
+/* ===sort===== */
 
 .sort-item {
   margin-left: 70.3em;
@@ -76,16 +110,7 @@ input[type='number'] {
   padding-top: 4px;
 }
 
-/* ======button======= */
-.allpurpose_button {
-  margin-top: -820px;
-  background-color:#FF7100; 
-  color: white;
-  padding: 7px 15px 7px 10px;
-  border: none;
-  border-radius: 2px;
-  font-size: 16px;
-}
+
 
 /* Styles for the dropdown */
 /* .dropdown {
@@ -156,16 +181,17 @@ input[type='number'] {
 .filter_bottom {
   margin-top: 0rem;
   margin-left: 0rem;
- 
+
 }
 
 /* ======side images ======== */
 
-.above_iframe{
- margin-left: 66.5rem;
- margin-bottom: -1.5px;
+.above_iframe {
+  margin-left: 66.5rem;
+  margin-bottom: -1.5px;
 }
-.above_iframe img{
+
+.above_iframe img {
   width: 20rem;
   height: 2.5rem;
 }
@@ -174,58 +200,155 @@ input[type='number'] {
   margin-top: -95rem;
   height: 10px;
 }
+
 .image-container-fressbe img {
   width: 65rem;
   height: 60px;
   margin-left: 70px;
 }
+
 .image-container-fressbe:hover {
   cursor: pointer;
 }
 
 .image-container-left {
   margin-top: 160px;
-  margin-left: -230px;
 }
+
 .image-container-left img {
+  margin-left: -955px;
   width: 135px;
   height: 700px;
 }
 
 .image-container-right {
   margin-top: -695px;
-  margin-left: 1230px;
 }
+
 .image-container-right img {
   width: 135px;
   height: 700px;
+  margin-left: -26px;
 }
 
 .image-container-sidefull1 {
   margin-top: -42rem;
 }
+
 .image-container-sidefull1 img {
   width: 18rem;
   height: 35rem;
-}  
+}
 
 .image-container-sidefull2 {
   margin-top: 0rem;
+  padding: 0;
 }
+
 .image-container-sidefull2 img {
   width: 18rem;
-  height: 40rem;
+  height: 35rem;
 }
 
 .image-container-bottom img {
   width: 1188px;
   height: 560px;
-} 
+}
+
 .image-container-bottom {
-  margin-top: 35px; 
+  margin-top: 35px;
   background-color: #F9F9F9;
 }
 
 .filter_cardetails {
   margin-bottom: 30px;
+}
+
+/* Style for the page numbers */
+.filter_bottom span {
+  margin: 0 10px;
+  /* Add a 3px margin between page numbers */
+  cursor: pointer;
+}
+
+.filter_bottom_pagenumbers {
+  /* background-color: white; */
+  width: 30rem;
+  margin-left: -42rem;
+  margin-top: 4rem;
+}
+
+.filter_bottom {
+  margin-top: -10px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* background-color: white; */
+}
+
+/* Style for the current page */
+.filter_bottom span.active {
+  background-color: #FDF0E4;
+  color: orange;
+  padding: 5px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.filter_bottom button.next:disabled,
+.filter_bottom button.next:active,
+.filter_bottom button.previous:disabled,
+.filter_bottom button.previous:active {
+  color: #FD9440;
+  background-color: #FDF0E4;
+}
+
+.next {
+  padding: 10px 21px;
+  border-radius: 30px;
+  border: none;
+}
+
+.previous {
+  padding: 7px 12px;
+  border-radius: 30px;
+  border: none;
+}
+
+.next:hover,
+.previous:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+
+  .image-container-bottom,
+  .image-container-sidefull2,
+  .image-container-sidefull1,
+  .image-container-right,
+  .image-container-left,
+  .image-container-fressbe,
+  .above_iframe,
+  .iframe__top {
+    display: none;
+  }
+
+  .filter-top {
+    width: 24rem;
+    margin-left: -69.5rem;
+  }
+
+
+
+  .filter-item label {
+    font-size: 13px;
+    margin-left: -4px;
+  }
+
+  /* filter.css */
+  .filter-container {
+    display: none;
+  } 
+
 }

@@ -5,17 +5,17 @@ const Hero = ({car, className }) => {
     <>
        {/* <div className={`hero ${className}`}>  */}
        <div className="car-details-wrapper"> 
-      <div className="cardetails--container">
-          <div className="vital_info">
+      <div className="cardetails--container">   
+          <div className="vital_info">  
             <p className="divider--price"> {car.price} </p>
             <div className="divider--enginesize">
-              <p> {car.engineSize} </p>
-              <p> {car.hand} </p> 
-              <p className="divider--year"> {car.year} </p>
+              <p className='mediaquery'> {car.engineSize} </p>
+              <p className='mediaquery'> {car.hand} </p> 
+              <p className="mediaquery"> {car.year} </p>
             </div>
             <div class="vl">
               <p> {car.name} </p>   
-              <p>Prestige Automatic 1.0 (100 cc)</p>
+              <p> {car.model}</p>
             </div> 
           </div>
 
@@ -31,7 +31,7 @@ const Hero = ({car, className }) => {
           <p>Year</p>
         </div>
         </div>
-        <p><span><strong>Updated today</strong></span></p>
+        <p className="updated_today"><span><strong>Updated today</strong></span></p>
         {/* </div> */}
     </>
   )

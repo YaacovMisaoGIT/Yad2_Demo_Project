@@ -4,6 +4,8 @@
     padding:0;
     /* overflow: hidden; */
     /* font-family: 'PT Sans', sans-serif; */
+    /* max-width: 100%; */ 
+    /* overflow-x: auto; */
 }
 
 body {
@@ -97,4 +99,72 @@ header a {
     margin-right: 160px;  
   } */
 /* =====iFrame in App.js ====  */
-  
+.above_iframe{
+    margin-left: 66.5rem;
+    margin-bottom: -1.5px;
+   }
+   .above_iframe img{
+     width: 20rem;
+     height: 2.5rem;
+   }
+   
+   .image-container-fressbe {
+     margin-top: -95rem;
+     height: 10px;
+   }
+   .image-container-fressbe img {
+     width: 65rem;
+     height: 60px;
+     margin-left: 70px;
+   }
+   .image-container-fressbe:hover {
+     cursor: pointer;
+   }
+   
+   .image-container-left {
+     margin-top: 160px;
+     margin-left: -230px;
+   }
+   .image-container-left img {
+     width: 135px;
+     height: 700px;
+   }
+   
+   .image-container-right {
+     margin-top: -695px;
+     margin-left: 1230px;
+   }
+   .image-container-right img {
+     width: 135px;
+     height: 700px;
+   }
+   
+   .image-container-sidefull1 {
+     margin-top: -42rem;
+   }
+   .image-container-sidefull1 img {
+     width: 18rem;
+     height: 35rem;
+   }  
+   
+   .image-container-sidefull2 {
+     margin-top: 0rem;
+   }
+   .image-container-sidefull2 img {
+     width: 18rem;
+     height: 40rem;
+   }
+   
+   .image-container-bottom img {
+     width: 1188px;
+     height: 560px;
+   } 
+   .image-container-bottom {
+     margin-top: 35px; 
+     background-color: #F9F9F9;
+   }
+   
+   
+
+/* CSS for devices with a maximum width of 896px (iPhone 11 landscape) */
+@media (max-width: 896px) {}

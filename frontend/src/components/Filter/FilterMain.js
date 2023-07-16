@@ -12,6 +12,7 @@ import PriceFilter from './SmallFilters/PriceFilter';
 import AreaFilter from './SmallFilters/AreaFilter'; // Import the AreaFilter component
 import RightFilter from './SmallFilters/RightFilter';
 import LeftCornerMost from '../Advertisements/LeftCornerMost';
+import Advs_Filtermain from './Advs_Filtermain'
 
 
 const FilterMain = ({
@@ -77,10 +78,11 @@ const FilterMain = ({
 
   return (
     <>
+      {/* <Advs_Filtermain />  */}
       <div>
         <div className="above_iframe">
-          <img 
-             src= "../images/aboveiframe.png" 
+          <img
+            src="../images/aboveiframe.png"
           />
         </div>
         <iframe
@@ -90,7 +92,7 @@ const FilterMain = ({
       </div>
       <div className="filter-top">
         <div className="hello">
-          <div className="filter-item">   
+          <div className="filter-item">
             <label>Manufacturer</label>
             <select onChange={(e) => handleManufacturerSelect(e.target.value)}>
               <option value="">manufacturer</option>
@@ -115,13 +117,29 @@ const FilterMain = ({
           </select>
         </div>
 
-        <YearFilter onYearSelect={onYearSelect} />
+        <div className="filter-container">
+          <YearFilter onYearSelect={onYearSelect} />
+        </div>
 
-        <PriceFilter onPriceRangeChange={onPriceRangeChange} />
+        <div className="filter-container">
+          <PriceFilter onPriceRangeChange={onPriceRangeChange} />
+        </div>
 
-        <AreaFilter Area={Area} onAreaSelect={onAreaSelect} />
+        <div className="filter-container">
+          <AreaFilter className="price-filter-container" Area={Area} onAreaSelect={onAreaSelect} />
+        </div>
 
-        <button className="allpurpose_button" onClick={handleSearch}>Search  &#x26B2;</button>
+        <div className="advanced_search">
+          <button className="advanced_searchbutton" >
+            Advanced Search &#10011;
+          </button>
+        </div>
+        <div className="search-button-container">
+          <button className="allpurpose_button" onClick={handleSearch}>
+            Search &#x26B2;
+          </button>
+        </div>
+
         <div className="image-container-left">
           <img
             src="../images/side_images.png"
@@ -133,29 +151,30 @@ const FilterMain = ({
           />
         </div>
         <div className="image-container-fressbe">
-          <img 
+          <img
             src="../images/fressbe.png"
           />
-        </div> 
+        </div>
         <div className="image-container-sidefull1">
-          <img 
+          <img
             src="../images/sidefull1.png"
           />
-           <div className="image-container-sidefull2">
-          <img 
-            src="../images/sidefull2.png"
-          />
+          <div className="image-container-sidefull2" alt='images'>
+            <img
+              src="../images/sidefull2.png"
+            />
+          </div>
+
         </div>
-        </div> 
-       
+
         <div className="image-container-bottom">
-          <img 
+          <img
             src="../images/bottom.png"
           />
-        </div> 
+        </div>
       </div>
 
-        <RightFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
+      <RightFilter handleSortSelect={handleSortSelect} sortOptions={sortOptions} />
 
       {isSearchClicked && filteredCars.length > 0 && (
         <div>

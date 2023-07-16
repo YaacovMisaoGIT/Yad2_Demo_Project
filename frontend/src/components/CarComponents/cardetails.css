@@ -9,7 +9,10 @@
 .hero_wrapper{
   margin-top: 0px ;
 }
- 
+.hero--container{
+  /* width:40px; */  
+  margin-left: -44rem;
+} 
 
 /* .hero:hover span {
     display: none;
@@ -95,11 +98,14 @@ height: 102px;
 }
   */
 .divider--price {
-    margin-right: 130px;
+    margin-left: 15rem; 
+    margin-right: 8rem; 
 }
-
+.updated_today{
+  margin-left: 13rem; 
+}
 .divider--year {
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 
 .hero:hover {
@@ -168,10 +174,12 @@ height: 102px;
   font-family: Rubik, sans-serif;
   margin-top: -3.7rem;
   display: flex;
-  margin-left: 205px;
+  margin-left: 28rem;
   gap: 12px;
 }
-
+.vl{
+  margin-left: 6rem;
+}
 .hero .hero:hover {
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
@@ -756,3 +764,50 @@ height: 102px;
   .Hero2B_Number .enlarged.number-15::before {
     border-top-color: #961F2C;
   }
+
+
+  /* ================= */ 
+  
+@media (max-width: 414px) {
+  .hero--container{
+    margin-top: 1.2rem;
+  }
+  .hero{  
+    width: 26.5rem;
+    margin-left: -40rem;  /*main main main  */
+  }
+  .cars {
+    /* display: none; */
+    margin-left: -31rem;  /*main main main  */
+  }
+ 
+  .divider--price{
+    margin-top: -0rem;
+    font-size: 15px;
+    margin-left: 12rem;
+  } 
+  .vl{
+    /* margin-top: -0.5rem; */
+    font-size: 15px;
+    margin-left: 14.5rem;
+  }
+  .updated_today{
+    display: none;
+    
+  }
+  
+  .cardetails--container .divider--enginesize{
+    margin-right: -20rem;
+    /* margin-left: -10rem; */
+    margin-bottom: -1rem;
+  }
+  .divider--enginesize .mediaquery {
+    display: none;
+  }
+  .divider--year p{
+    display: none;
+  }
+  .lower_vital_info_tag p{
+  display: none;
+}
+}

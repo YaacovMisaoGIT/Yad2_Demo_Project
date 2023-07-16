@@ -1,69 +1,107 @@
-.navbar-container {
-  border: 1px solid gray;
-  background-color: #f8f8f8;
-  padding: 10px;
-}
-
-.navbar-item {
-  display: inline-block;
-  margin-right: 10px;
+.navbar {
   position: relative;
+  z-index: 2;
+  height: 10vh;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 5px 12px 0 rgb(0 0 0 / 10%);
+  }
+#logo {
+width: 4.5rem;
+margin-left: 10px;
+padding: 0.8rem;
+}
+.icon {
+margin-right: 1rem;
+width: 2.3rem;
+padding: 0.3rem;
+border-radius: 50%;
+}
+.userimg {
+margin-left: 1rem;
+background-color: rgb(247, 244, 244);
+}
+.icon:hover {
+background-color: rgb(207, 204, 204);
+cursor: pointer;
 }
 
-.navbar-heading {
-  padding: 10px;
+.nav-items {
+display: flex;
+text-align: center;
+justify-content: flex-end;
+list-style: none;
+}
+.nav-link {
+display: flex;
+align-items: center;
+height: 10vh;
+padding:0 0.5rem;
+text-decoration: none;
+color: black;
+font-size: 1rem;
+}
+.nav-link:hover {
+background-color: rgb(235, 230, 230) ;
+cursor: pointer;
+}
+
+.nav-options {
+  height: 40px;
+  display: flex;
   cursor: pointer;
 }
-
-.navbar-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  /* width: 500px; */
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  display: flex; /* Add this to make columns side by side */
-}
-
-.navbar-list-item {
+.item-menu {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 5px;
+  grid-template-columns: 1fr 1fr ;
+padding: 1rem 0;
+position: absolute;
+top: 74px;
+background-color: white;
+box-shadow: 0 5px 12px 0 rgb(0 0 0 / 12%);
+} 
+.sub-item {
+display: flex;
+flex-direction: row;
+padding: 0.5rem;
+cursor: pointer;
 }
-
-.navbar-icon {  
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: px;
-}
-
-.navbar-item:hover .navbar-heading {
-  background-color: lightgray;
-}
-
-.navbar-name {
+.sub-item-link:hover {
+  color: rgb(244, 161, 9);
   display: flex;
-  align-items: center;
-  white-space: nowrap;
-  /* overflow: hidden;  */
+  flex-direction: column;
 }
 
-.navbar-column1 {
-  flex: 1;
+.sub-item-link {
+text-decoration: none;
+color: black;
+} 
+
+.menu-icon{
+width: 2rem;
+padding-right : 0.8rem;
+
+}
+.btn {
+margin-left: 1rem;
+border: none;
+background: transparent;
+padding: 10px 20px;
+font-size: 1rem;
+font-weight: bold;
+color: white;
+background: rgb(5, 187, 117);
+border-radius: 20px;
+transition: 0.3s all ease-out;
 }
 
-.navbar-column2 {
-  flex: 1;
-}
-.navbar-list-item  {
-  color: black;
-  text-decoration: none;
-}
+.btn:hover {
+background-color: rgb(7, 139, 49);
+cursor: pointer;
+}  
 
-.navbar-list-item:hover {
-  color: #FF7C14;
+.navbar img{
+  background-color: none;
 }

@@ -1,4 +1,4 @@
-/* ===sort===== */
+ 
 .filter_container{
   margin-top: 0px;
 }
@@ -13,7 +13,7 @@
 }
 
 
-/* ====Filter===== */
+ 
 .filter button{
   padding: 5px  10px;
   background-color: white;
@@ -25,6 +25,21 @@
     margin-left: 31.5rem;
     margin-top: -3rem;
     margin-bottom: 0;
+  } 
+
+  @media (max-width: 414px) {
+     .filter {
+    margin-left: 0.5rem;
   }
+  .sort-item p {
+    margin-left: -63rem;
+  }
+  .sort-item select {
+    margin-left: -60rem;
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+   
+
+}
 
   

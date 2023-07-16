@@ -5,6 +5,7 @@ import Main from "./Main"
 import Footer from "./components/FooterComponets/Footer"
 import FilterMain from "./components/Filter/FilterMain"
 import NavbarYona from './components/NavbarCompo/NavbarYona'
+import Header from './components/NavbarCompo/Header'
 import './index.css'
 
 // const url = 'http://localhost:3001/'
@@ -12,8 +13,9 @@ function App() {
 
    return (
       <>
-         {/* <NavbarYona />  */}
          <Router>
+         <NavbarYona /> 
+         <Header/>
          </Router>
          <Main />  <br /> <br />
          <Footer />

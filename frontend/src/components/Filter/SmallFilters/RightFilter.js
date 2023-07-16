@@ -10,7 +10,7 @@ const RightFilter = ({ handleSortSelect, sortOptions }) => {
       <div className="filter">
         <p>Filter search<Icons.FaFunnelDollar /></p>
       </div>
-      <div className="sort-item">
+      <div className="sort-item">    
         <p>Sort by</p>
         <select onChange={(e) => handleSortSelect(e.target.value)}>
           <option value=""></option>

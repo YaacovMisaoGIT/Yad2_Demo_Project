@@ -9,7 +9,7 @@
    margin-top: 42rem;
 }
 body {
-  margin: 0;
+  margin: 0; 
 }
 
 h3 {
@@ -134,13 +134,13 @@ hr {
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
   column-gap: 45px;
-  width: 2000px;
+  width: 1200px; 
   margin-right: 5rem;
-  margin-left: -18%;
+  margin-left: -14%;
   font-family: Rubik, sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   color: white;
 }
 .col--last a:hover {
@@ -164,4 +164,96 @@ hr {
   text-decoration: underline;
   cursor: pointer;
 }  
+
+/* =====responsive iPhone11 ========  */ 
+   /* CSS for devices with a maximum width of 414px (iPhone 11 portrait) */
+@media (max-width: 414px) {
+  .footer_wrapper{
+    width: 103vw;
+    height: 600px;
+    margin-top: 1rem;
+  }
+  .footer-menu {
+    margin-right: -50px;
+    margin-left: -100px;
+  }
+  .footer-menu h3 {
+    margin-top: 14rem;
+    font-size: 10px;
+    font-weight:600;
+  }
+  .footer-menu li{
+    /* display: none; */
+  }
+  .footer-menu ul li{
+    /* display: none;  */
+    font-size: 11px; 
+    overflow: 'hidden';
+  }
+  .footer-menu ul li a:hover {
+    text-decoration: underline;
+   }
+   .footer--icons { 
+    /* width: 30%; */
+    /* margin-top: -520px; */
+    margin-left: 27%;
+    width: 60%;
+    margin-bottom:690px;
+  }
+  
+  .footer--icons img{
+    height: 40px;
+    width: 40px;
+  }
+  .footer--para {display: none;}
+  .footer--p {
+    margin-top: -80em;
+    color: rgb(158, 148, 148);
+    margin-left: 3.5%;
+    text-align: center;
+    font-family: Rubik, sans-serif;
+    font-size: 8px; 
+  }
+
+  .col--last {
+      display: inline; 
+      /* display: flex; */
+      /* flex-wrap: nowrap; */
+      /* justify-content: center; */
+      /* gap: 10px; */
+      max-height: 48px; /* Adjust the height as needed */
+      /* overflow: hidden; */
+      font-size: 13px;
+    } 
+
+    .version {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      color: whitesmoke;
+      /* padding-left: 45px; */
+      margin-bottom: 1em;
+    }
+    .version h3 {
+      font-family: Rubik, sans-serif;
+      font-size: 14px;
+      margin-left: 0px;
+    }
+    .version:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    } 
+    hr {
+      /* margin-top: 1.5em; */
+      width: 320px;
+      /* display: block; */
+      /* height: 1px; */
+      /* border: 0; */
+      border-top: 1.3px solid grey;
+      margin-left: 7%;
+    }
+    
+}
+
+
  
