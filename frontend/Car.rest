@@ -41,11 +41,12 @@ Content-Type: "application/json"
   "price": 121000,
   "reverseCamera": false,
   "roofWindow": true,
-  "salesArea": "Maalot",
+  "salesArea": "Jerusalem",
   "stabilityControl": true,
   "tirePressureSensors": true,
   "user": {
     "userEmail": "email@email.com",
+    "userName" : "Yaakov Misao",
     "userNumber": 12345678
   },
   "year": 2021

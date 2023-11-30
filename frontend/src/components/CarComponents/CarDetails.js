@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import "./cardetails.css"
-import TickIcon from '../BooleanValues/TickIcon'; 
-import CrossIcon from '../BooleanValues/CrossIcon'; 
 import * as Icons from 'react-icons/fa' 
 import Hero from './Hero.js'; 
 import Hero2 from './Hero2.js'; 

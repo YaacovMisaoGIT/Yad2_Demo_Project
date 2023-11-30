@@ -11,8 +11,7 @@ import YearFilter from './SmallFilters/YearFilter';
 import PriceFilter from './SmallFilters/PriceFilter';
 import AreaFilter from './SmallFilters/AreaFilter'; // Import the AreaFilter component
 import RightFilter from './SmallFilters/RightFilter';
-import LeftCornerMost from '../Advertisements/LeftCornerMost';
-import Advs_Filtermain from './Advs_Filtermain'
+// import LeftCornerMost from '../Advertisements/LeftCornerMost';
 
 
 const FilterMain = ({
@@ -182,7 +181,7 @@ const FilterMain = ({
           <div className='filter_cardetails'>
             {filteredCars.map((car) => (
               <CarDetails car={car} key={car.id}>
-                <LeftCornerMost />
+                {/* <LeftCornerMost /> */}
                 <Hero className="hero" />
                 <Hero2 />
                 <Hero2B />

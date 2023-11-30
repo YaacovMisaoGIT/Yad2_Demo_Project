@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import "./cardetails.css"
-import TickIcon from '../BooleanValues/TickIcon'; 
-import CrossIcon from '../BooleanValues/CrossIcon'; 
 import * as Icons from 'react-icons/fa' 
 // import {SiPhone} from 'react-icons/si'
 
@@ -34,7 +32,8 @@ const Hero2 = ({car, user}) => {
 
             <div className="hero--container2">
               <img src= {car.images} alt="car here" />
-              <img className="imgWhiteLogo2" src={require("../images/yad2logoWhite.png")}  alt="whitelogo here" />
+              <img className="imgWhiteLogo2" src= "yad2logoWhite.png"  alt="whitelogo here" />
+              {/* <img className="imgWhiteLogo2" src={require("../images/yad2logoWhite.png")}  alt="whitelogo here" /> //If images folder is stored in src */}
             </div>
           </div>
 

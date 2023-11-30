@@ -62,9 +62,14 @@ const setCar = asyncHandler(async (req, res) => {
     const car = await Car.create({
         owner: req.body.owner,
 
-        user: req.body.user.userName,
-        user: req.body.user.userNumber,
-        user: req.body.user.userEmail,
+        // user: {
+        //     userName: req.body.user.userName,
+        //     userNumber: req.body.user.userNumber,
+        //     userEmail: req.body.user.userEmail,
+        // },
+        // user: req.body.user.userName,
+        // user: req.body.user.userNumber,
+        // user: req.body.user.userEmail,
 
         images: req.body.images,
         name: req.body.name,

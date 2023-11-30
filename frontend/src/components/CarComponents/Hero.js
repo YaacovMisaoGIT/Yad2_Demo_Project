@@ -21,7 +21,9 @@ const Hero = ({car, className }) => {
 
           <div className="hero--container">
             <img src= {car.images}  alt="car here" />
-            <img className="imgWhiteLogo" src={require("../images/yad2logoWhite.png")}  alt="whitelogo here" />
+            <img className="imgWhiteLogo" src="yad2logoWhite.png" alt="whitelogo here" />
+
+            {/* <img className="imgWhiteLogo" src={require("yad2logoWhite.png")}  alt="whitelogo here" />  If images folder is stored in src     */}
           </div>
         </div>
 
